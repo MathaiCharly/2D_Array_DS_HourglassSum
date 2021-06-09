@@ -21,23 +21,23 @@ class Result {
     int j;
     int a;
     int max;
-    List<Integer> res = new ArrayList<>();
+    List<Integer> result = new ArrayList<>();
     
     for(i=0;i<=3;i++)
     {
         for(j=1;j<=4;j++)
         {
             a=arr.get(i).get(j-1)+arr.get(i).get(j)+arr.get(i).get(j+1)+arr.get(i+1).get(j)+arr.get(i+2).get(j-1)+arr.get(i+2).get(j)+arr.get(i+2).get(j+1);
-            res.add(a);
+            result.add(a);
         }
     }
     int k;
-    max=res.get(0);
-    for(k=1;k<res.size();k++)
+    max=result.get(0);
+    for(k=1;k<result.size();k++)
     {
-        if(res.get(k)>max)
+        if(result.get(k)>max)
         {
-            max=res.get(k);
+            max=result.get(k);
         }
     }
     return max; 
